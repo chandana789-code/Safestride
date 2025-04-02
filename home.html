@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Stride - Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #1e1e2e, #4e4e6e); color: #ffffff; }
+        header { padding: 20px; background-color: #1e1e2e; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        header h1 { font-size: 2.5rem; font-weight: bold; }
+        nav { display: flex; justify-content: center; gap: 20px; padding: 15px; background: #2e2e4e; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); }
+        nav a { color: #f0f0f0; font-size: 1.1rem; text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: 0.3s; }
+        nav a:hover { background-color: #4e4e6e; }
+        main { padding: 40px; text-align: center; }
+        .search-container { margin-bottom: 20px; }
+        input[type="text"] { padding: 10px; font-size: 16px; width: 60%; border-radius: 5px; border: none; outline: none; }
+        button { padding: 10px 20px; font-size: 16px; border-radius: 5px; background-color: #4e4e6e; color: #ffffff; border: none; cursor: pointer; transition: 0.3s; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); }
+        button:hover { background-color: #6e6e8e; transform: scale(1.05); }
+        .card-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
+        .card { background-color: #2e2e4e; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .card p { font-size: 1rem; }
+    </style>
+    <script>
+        function searchLocation() {
+            const location = document.getElementById('locationInput').value;
+            if (location) {
+                window.location.href = `crime-report-list.html?location=${location}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Safe Stride</h1>
+    </header>
+    <nav>
+        <a href="map.html">🌍 Map View</a>
+        <a href="crime-report-list.html">📝 Crime Report List</a>
+        <a href="feedback.html">⭐ Feedback Form</a>
+        <a href="route-planner.html">🗺️ Route Planner</a>
+    </nav>
+    <main>
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Search for a location...">
+            <button onclick="searchLocation()">🔍 Search</button>
+        </div>
+        <h2>Welcome to Safe Stride</h2>
+        <p>Empowering you to navigate safely with real-time insights and crime data. Stay aware, stay safe!</p>
+        <div class="card-container">
+            <div class="card">
+                <h3>🌍 Map View</h3>
+                <p>View routes, crime hotspots, and current locations using an interactive map.</p>
+            </div>
+            <div class="card">
+                <h3>📝 Crime Report List</h3>
+                <p>Get detailed information about recent incidents and crime-prone areas.</p>
+            </div>
+            <div class="card">
+                <h3>⭐ Feedback Form</h3>
+                <p>Rate locations based on safety and share valuable feedback for safer routes.</p>
+            </div>
+            <div class="card">
+                <h3>🗺️ Route Planner</h3>
+                <p>Plan the safest route between two locations with crime data insights.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
